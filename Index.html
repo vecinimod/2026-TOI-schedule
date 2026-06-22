@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSC Theatre on Ice Nationals 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .team-prelim { border-left: 6px solid #3b82f6; }
+        .team-intermediate { border-left: 6px solid #10b981; }
+        .team-both { border-left: 6px solid #8b5cf6; }
+        .tab-active { border-bottom: 3px solid #1d4ed8; color: #1d4ed8; font-weight: bold; }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800 pb-12">
+
+    <header class="bg-gradient-to-r destruction bg-indigo-900 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <div class="text-center sm:text-left mb-2 sm:mb-0">
+                <h1 class="text-xl font-bold tracking-tight">CSC Theatre on Ice Nationals 2026</h1>
+                <p class="text-xs text-indigo-200"><i class="fa-solid fa-calendar-days mr-1"></i> June 22-27, 2026 | Irvine, CA</p>
+            </div>
+            <div class="flex space-x-2 text-xs">
+                <span class="px-2 py-1 rounded bg-blue-600 font-semibold">Preliminary Team</span>
+                <span class="px-2 py-1 rounded bg-emerald-600 font-semibold">Intermediate Team</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 mt-6">
+        
+        <div class="mb-6 bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r shadow-sm">
+            <div class="flex items-start">
+                <i class="fa-solid fa-triangle-exclamation text-amber-500 mt-1 mr-3 text-lg"></i>
+                <div>
+                    <h3 class="font-bold text-amber-800 text-sm">Schedules subject to change</h3>
+                    <p class="text-xs text-amber-700 mt-0.5">Please monitor the team text thread and coaching communications regularly for live updates regarding practice times and ready rooms.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="bg-white rounded-xl shadow-sm p-5 mb-6 border border-gray-100">
+            <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Event Information</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex items-start space-x-3">
+                    <div class="bg-blue-50 p-2.5 rounded-lg text-blue-600"><i class="fa-solid fa-map-location-dot text-lg"></i></div>
+                    <div>
+                        <h4 class="font-bold text-sm text-gray-900">Great Park Ice (Venue)</h4>
+                        <p class="text-xs text-gray-600">888 Ridge Valley, Irvine, CA</p>
+                        <a href="https://www.greatparkice.com/figure-skating/theatre-on-ice/" target="_blank" class="text-xs text-indigo-600 hover:underline inline-block mt-1 font-medium">Visit Venue Website →</a>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-3">
+                    <div class="bg-purple-50 p-2.5 rounded-lg text-purple-600"><i class="fa-solid fa-hotel text-lg"></i></div>
+                    <div>
+                        <h4 class="font-bold text-sm text-gray-900">Primary Hub: Residence Inn</h4>
+                        <p class="text-xs text-gray-600">15181 Newport Ave, Tustin, CA 92780</p>
+                        <span class="text-[10px] bg-purple-100 text-purple-800 px-1.5 py-0.5 rounded font-medium mt-1 inline-block">Ready Room • Hair/Makeup • Meetings</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3 pt-3 border-t border-gray-100 text-xs text-gray-500 flex justify-between items-center">
+                <span><strong>Hotel 2:</strong> Fairfield Inn & Suites (15011 Newport Ave)</span>
+                <span class="text-red-500 font-bold"><i class="fa-solid fa-moon mr-1"></i> Nightly Curfew: 9:30 PM</span>
+            </div>
+        </section>
+
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden mb-6 border border-gray-100">
+            <div class="flex border-b border-gray-200 overflow-x-auto whitespace-nowrap scrollbar-hide text-sm">
+                <button onclick="filterDay('all')" id="tab-all" class="flex-1 py-3 px-4 text-center font-medium transition-all focus:outline-none tab-active">All Week</button>
+                <button onclick="filterDay('mon')" id="tab-mon" class="flex-1 py-3 px-4 text-center font-medium text-gray-500 hover:text-gray-900 transition-all focus:outline-none">Mon 6/22</button>
+                <button onclick="filterDay('tue')" id="tab-tue" class="flex-1 py-3 px-4 text-center font-medium text-gray-500 hover:text-gray-900 transition-all focus:outline-none">Tue 6/23</button>
+                <button onclick="filterDay('wed')" id="tab-wed" class="flex-1 py-3 px-4 text-center font-medium text-gray-500 hover:text-gray-900 transition-all focus:outline-none">Wed 6/24</button>
+                <button onclick="filterDay('thu')" id="tab-thu" class="flex-1 py-3 px-4 text-center font-medium text-gray-500 hover:text-gray-900 transition-all focus:outline-none">Thu 6/25</button>
+                <button onclick="filterDay('fri')" id="tab-fri" class="flex-1 py-3 px-4 text-center font-medium text-gray-500 hover:text-gray-900 transition-all focus:outline-none">Fri 6/26</button>
+                <button onclick="filterDay('sat')" id="tab-sat" class="flex-1 py-3 px-4 text-center font-medium text-gray-500 hover:text-gray-900 transition-all focus:outline-none">Sat 6/27</button>
+            </div>
+            
+            <div class="bg-gray-50 px-4 py-2 flex flex-wrap gap-2 items-center justify-between text-xs border-b border-gray-100">
+                <span class="font-semibold text-gray-500">Filter by squad:</span>
+                <div class="flex space-x-1">
+                    <button onclick="filterSquad('all')" id="btn-squad-all" class="px-3 py-1 rounded-full bg-gray-900 text-white font-medium">Show All</button>
+                    <button onclick="filterSquad('prelim')" id="btn-squad-prelim" class="px-3 py-1 rounded-full bg-white text-blue-600 border border-blue-200 hover:bg-blue-50 font-medium">Preliminary Only</button>
+                    <button onclick="filterSquad('inter')" id="btn-squad-inter" class="px-3 py-1 rounded-full bg-white text-emerald-600 border border-emerald-200 hover:bg-emerald-50 font-medium">Intermediate Only</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="schedule-container" class="space-y-6">
+
+            <div class="day-card" data-day="mon">
+                <h3 class="text-base font-bold text-gray-900 mb-2 px-1 flex items-center">
+                    <span class="bg-gray-200 text-gray-800 text-xs px-2 py-0.5 rounded-md mr-2">Mon, June 22</span>
+                    Arrival & Settle In
+                </h3>
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 divide-y divide-gray-100">
+                    <div class="p-4 team-prelim squad-prelim flex justify-between items-center">
+                        <div>
+                            <span class="text-[10px] bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded-full uppercase">Preliminary Team</span>
+                            <h4 class="font-bold text-sm text-gray-900 mt-1">Arrival Day & Settle In</h4>
+                            <p class="text-xs text-gray-500 mt-0.5">Travel to Irvine, California, check into hotel, and rest up.</p>
+                        </div>
+                        <span class="text-xs font-semibold text-gray-500 whitespace-nowrap bg-gray-100 px-2 py-1 rounded">All Day</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card" data-day="tue">
+                <h3 class="text-base font-bold text-gray-900 mb-2 px-1 flex items-center">
+                    <span class="bg-gray-200 text-gray-800 text-xs px-2 py-0.5 rounded-md mr-2">Tue, June 23</span>
+                    Practice & Socials
+                </h3>
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 divide-y divide-gray-100">
+                    <div class="p-4 team-intermediate squad-inter">
+                        <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full uppercase">Intermediate Team</span>
+                        <h4 class="font-bold text-sm text-gray-900 mt-1">Arrival & Check-In Day</h4>
+                        <p class="text-xs text-gray-500 mt-0.5">Travel to Irvine, California and settle into accommodations.</p>
+                    </div>
+                    
+                    <div class="p-4 team-prelim squad-prelim">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="text-[10px] bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded-full uppercase">Preliminary Team</span>
+                                <h4 class="font-bold text-sm text-gray-900 mt-1"><span class="bg-amber-100 text-amber-800 font-bold px-1 rounded text-xs mr-1">OPI</span> Choreographic Exercise (CE) Practice</h4>
+                            </div>
+                        </div>
+                        <div class="mt-3 space-y-2 border-l border-gray-200 pl-3 ml-1 text-xs">
+                            <div><strong class="text-gray-700">6:30 AM</strong> — Meet in Hotel 1 Lobby</div>
+                            <div><strong class="text-gray-700">6:45 AM</strong> — Depart for rink (Great Park Ice - Main Arena)</div>
+                            <div><strong class="text-gray-700">7:24 AM</strong> — Enter Team Ready Room 3</div>
+                            <div class="text-blue-600 font-semibold"><strong class="text-gray-700">7:49 - 7:57 AM</strong> — On Ice Practice Session</div>
+                            <div class="text-gray-500 bg-gray-50 p-1.5 rounded mt-1"><i class="fa-solid fa-ice-skate mr-1"></i> 8:15-9:30 AM: Stay near rink, grab food, visit merch area, watch other teams.</div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 team-prelim squad-prelim">
+                        <div>
+                            <span class="text-[10px] bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded-full uppercase">Preliminary Team</span>
+                            <h4 class="font-bold text-sm text-gray-900 mt-1"><span class="bg-gray-100 text-gray-700 font-bold px-1 rounded text-xs mr-1">UPI</span> Unofficial Practice Ice</h4>
+                        </div>
+                        <div class="mt-2 space-y-1.5 border-l border-gray-200 pl-3 ml-1 text-xs">
+                            <div><strong class="text-gray-700">9:35 AM</strong> — Meet at Rink 3</div>
+                            <div><strong class="text-gray-700">9:45 AM</strong> — Enter Team Ready Room (TBD)</div>
+                            <div class="text-blue-600 font-semibold"><strong class="text-gray-700">10:10 - 10:30 AM</strong> — On Ice</div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 team-both squad-prelim squad-inter bg-purple-50/50">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-[10px] bg-purple-100 text-purple-800 font-bold px-2 py-0.5 rounded-full uppercase">Both Teams</span>
+                                <h4 class="font-bold text-sm text-purple-950 mt-1"><i class="fa-solid fa-icons mr-1 text-purple-600"></i> Competitor Party & Pin Trading</h4>
+                                <p class="text-xs text-purple-800/80 mt-0.5">Location TBD</p>
+                            </div>
+                            <span class="text-xs font-bold text-purple-700 bg-purple-100 px-2 py-1 rounded">4:00 - 6:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card" data-day="wed">
+                <h3 class="text-base font-bold text-gray-900 mb-2 px-1 flex items-center">
+                    <span class="bg-gray-200 text-gray-800 text-xs px-2 py-0.5 rounded-md mr-2">Wed, June 24</span>
+                    Preliminary Competition Day
+                </h3>
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 divide-y divide-gray-100">
+                    <div class="p-4 team-intermediate squad-inter">
+                        <div>
+                            <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full uppercase">Intermediate Team</span>
+                            <h4 class="font-bold text-sm text-gray-900 mt-1"><span class="bg-amber-100 text-amber-800 font-bold px-1 rounded text-xs mr-1">OPI</span> CE Official Practice Ice</h4>
+                        </div>
+                        <div class="mt-2 space-y-1.5 border-l border-gray-200 pl-3 ml-1 text-xs">
+                            <div><strong class="text-gray-700">7:00 AM</strong> — Meet in Hotel 1 Lobby </div>
+                            <div><strong class="text-gray-700">7:15 AM</strong> — Depart for rink (Main Arena)</div>
+                            <div><strong class="text-gray-700">8:02 AM</strong> — Enter Ready Room 4</div>
+                            <div class="text-emerald-600 font-semibold"><strong class="text-gray-700">8:27 - 8:35 AM</strong> — On Ice</div>
+                            <div class="text-gray-500 italic mt-1">Post-practice: Return to hotel. Crossover skaters rest up!</div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 team-prelim squad-prelim bg-blue-50/20">
+                        <div>
+                            <span class="text-[10px] bg-blue-600 text-white font-bold px-2 py-0.5 rounded-full uppercase text-[9px]">COMPETITION EVENT</span>
+                            <h4 class="font-bold text-base text-blue-900 mt-1"><i class="fa-solid fa-trophy text-amber-500 mr-1"></i> Preliminary Choreographic Exercise (CE)</h4>
+                        </div>
+                        <div class="mt-3 space-y-2 border-l-2 border-blue-300 pl-3 ml-1 text-xs">
+                            <div><strong class="text-gray-700">10:30 AM</strong> — Meet in Hotel 1 Ready Room (<span class="font-semibold text-blue-800">Hair & Makeup Prep</span>). Wear black CE costume.</div>
+                            <div><strong class="text-gray-700">12:00 PM</strong> — Meet in Hotel 1 Lobby</div>
+                            <div><strong class="text-gray-700">12:15 PM</strong> — Depart for Great Park Ice</div>
+                            <div class="text-blue-900 font-medium"><strong class="text-gray-700">12:45 PM</strong> — Competition Officially Begins</div>
+                            <div><strong class="text-gray-700">1:15 PM</strong> — Enter Team Ready Room 9</div>
+                            <div class="text-red-600 font-bold text-sm bg-red-50 p-1 rounded inline-block"><strong class="text-gray-700">1:40 PM</strong> — On Ice Performance Time</div>
+                            <div class="text-gray-500 pt-1">Following event: Join parents in stands. Event wraps up ~2:50 PM.</div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 team-intermediate squad-inter">
+                        <div>
+                            <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full uppercase">Intermediate Team</span>
+                            <h4 class="font-bold text-sm text-gray-900 mt-1"><span class="bg-gray-100 text-gray-700 font-bold px-1 rounded text-xs mr-1">UPI</span> CE Unofficial Practice Ice</h4>
+                        </div>
+                        <div class="mt-2 space-y-1.5 border-l border-gray-200 pl-3 ml-1 text-xs">
+                            <div><strong class="text-gray-700">5:00 PM</strong> — Meet at Rink 1</div>
+                            <div><strong class="text-gray-700">5:10 PM</strong> — Enter Team Ready Room (TBD)</div>
+                            <div class="text-emerald-600 font-semibold"><strong class="text-gray-700">5:35 - 5:55 PM</strong> — On Ice</div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 team-both squad-prelim squad-inter bg-indigo-50/40">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                            <div>
+                                <span class="text-[10px] bg-purple-100 text-purple-800 font-bold px-2 py-0.5 rounded-full uppercase">Both Teams Joint Event</span>
+                                <h4 class="font-bold text-sm text-gray-900 mt-1"><i class="fa-solid fa-utensils mr-1 text-indigo-600"></i> Team Dinner at Roma D' Italia</h4>
+                                <p class="text-xs text-gray-600">611 El Camino Real, Tustin, CA 92780</p>
+                            </div>
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-100 px-2 py-1 rounded self-start">6:30 PM</span>
+                        </div>
+                        <div class="mt-2 bg-white p-2 rounded border border-gray-200 text-xs text-gray-600 space-y-1">
+                            <p>• <strong>Menu Rules:</strong> Kids 10 & under order from kids menu.</p>
+                            <p>• <strong>Adult Choices:</strong> Chicken Parmesan, Chicken Piccata, Eggplant Sorrentina, or Pasta with Meatballs.</p>
+                            <p>• <strong>Includes:</strong> Salad, rolls, soda, dessert. (Cash bar available)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card" data-day="thu">
+                <h3 class="text-base font-bold text-gray-900 mb-2 px-1 flex items-center">
+                    <span class="bg-gray-200 text-gray-800 text-xs px-2 py-0.5 rounded-md mr-2">Thu, June 25</span>
+                    Intermediate Competition Day
+                </h3>
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 divide-y divide-gray-100">
+                    <div class="p-4 team-intermediate squad-inter bg-emerald-50/20">
+                        <div>
+                            <span class="text-[10px] bg-emerald-600 text-white font-bold px-2 py-0.5 rounded-full uppercase text-[9px]">COMPETITION EVENT</span>
+                            <h4 class="font-bold text-base text-emerald-900 mt-1"><i class="fa-solid fa-trophy text-amber-500 mr-1"></i> Intermediate Choreographic Exercise (CE)</h4>
+                        </div>
+                        <div class="mt-3 space-y-2 border-l-2 border-emerald-300 pl-3 ml-1 text-xs">
+                            <div><strong class="text-gray-700">11:00 AM - 12:00 PM</strong> — Off-Ice Warm-Up & Readiness (Hotel 1 Ready Room)</div>
+                            <div><strong class="text-gray-700">12:00 PM</strong> — Lunch (On your own)</div>
+                            <div><strong class="text-gray-700">1:00 PM</strong> — Hair & Makeup Prep (Hotel 1 Ready Room). Arrive wearing all-black CE costume.</div>
+                            <div><strong class="text-gray-700">3:20 PM</strong> — Meet in Hotel 1 Lobby</div>
+                            <div><strong class="text-gray-700">3:30 PM</strong> — Depart for rink</div>
+                            <div><strong class="text-gray-700">4:17 PM</strong> — Enter Team Ready Room 2 <span class="text-emerald-700 font-semibold">(4:35 PM Event Begins)</span></div>
+                            <div class="text-red-600 font-bold text-sm bg-red-50 p-1 rounded inline-block"><strong class="text-gray-700">4:42 PM</strong> — On Ice Performance Time</div>
+                            <div class="text-gray-500 font-medium pt-1 text-[11px] text-amber-700"><i class="fa-solid fa-bolt mr-1"></i> Ends at 5:21 PM. Crossover skaters must hustle instantly to Prelim UPI on Rink 1!</div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 team-prelim squad-prelim">
+                        <div>
+                            <span class="text-[10px] bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded-full uppercase">Preliminary Team</span>
+                            <h4 class="font-bold text-sm text-gray-900 mt-1"><span class="bg-gray-100 text-gray-700 font-bold px-1 rounded text-xs mr-1">UPI</span> Free Program Unofficial Practice</h4>
+                        </div>
+                        <div class="mt-2 space-y-1.5 border-l border-gray-200 pl-3 ml-1 text-xs">
+                            <div><strong class="text-gray-700">5:30 PM</strong> — Meet at Rink 1</div>
+                            <div><strong class="text-gray-700">5:35 PM</strong> — Enter Team Ready Room (TBD)</div>
+                            <div class="text-blue-600 font-semibold"><strong class="text-gray-700">6:00 - 6:20 PM</strong> — On Ice Practice</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card" data-day="fri">
+                <h3 class="text-base font-bold text-gray-900 mb-2 px-1 flex items-center">
+                    <span class="bg-gray-200 text-gray-800 text-xs px-2 py-0.5 rounded-md mr-2">Fri, June 26</span>
+                    Preliminary Free Program
+                </h3>
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 p-4 team-prelim squad-prelim">
+                    <div class="mb-3">
+                        <span class="text-[10px] bg-blue-600 text-white font-bold px-2 py-0.5 rounded-full uppercase text-[9px]">COMPETITION EVENT</span>
+                        <h4 class="font-bold text-base text-blue-900 mt-1"><i class="fa-solid fa-trophy text-amber-500 mr-1"></i> Preliminary Free Program Long Program</h4>
+                        <p class="text-xs text-amber-700 bg-amber-50 p-2 rounded mt-2 border border-amber-200"><i class="fa-solid fa-circle-info mr-1"></i> <strong>Note on exact times:</strong> Precise scheduling depends directly on Wednesday's CE placement standings. Keep notifications on Friday morning!</p>
+                    </div>
+                    
+                    <div class="space-y-3 text-xs border-l-2 border-blue-400 pl-3 ml-1">
+                        <div>
+                            <span class="font-bold block text-gray-800">Practice Window (OPI):</span>
+                            <span class="text-gray-600">6:30 AM - 9:17 AM (Specific time window TBD post-Wednesday)</span>
+                        </div>
+                        <div>
+                            <span class="font-bold block text-gray-800">Hair & Makeup Prep:</span>
+                            <span class="text-gray-600">Time TBD at Hotel 1 Ready Room. <span class="text-purple-700 font-semibold">Please have Granny costume on and hair prepped for wig!</span></span>
+                        </div>
+                        <div>
+                            <span class="font-bold block text-gray-800">Rink Departure:</span>
+                            <span class="text-gray-600">Lobby call and departure times TBD.</span>
+                        </div>
+                        <div class="bg-gray-50 p-2 rounded border border-gray-200">
+                            <strong class="text-gray-900 block text-[13px] mb-1"><i class="fa-solid fa-star text-amber-500 mr-1"></i> 10:55 AM — Arena Event Officially Begins</strong>
+                            <p class="text-gray-600">Upon Arrival: Skaters go immediately with coaches for off-ice warm-up. Parents find spectator stadium seats.</p>
+                        </div>
+                        <div>
+                            <span class="font-bold block text-gray-700">Performance Wrap Up:</span>
+                            <span class="text-gray-600">After skating, meet parents in the stands to support remaining teams. Event concludes around 1:04 PM.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card" data-day="sat">
+                <h3 class="text-base font-bold text-gray-900 mb-2 px-1 flex items-center">
+                    <span class="bg-gray-200 text-gray-800 text-xs px-2 py-0.5 rounded-md mr-2">Sat, June 27</span>
+                    Intermediate Free Program
+                </h3>
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 divide-y divide-gray-100">
+                    
+                    <div class="p-4 team-intermediate squad-inter">
+                        <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full uppercase">Intermediate Team</span>
+                        <h4 class="font-bold text-sm text-gray-900 mt-1"><span class="bg-amber-100 text-amber-800 font-bold px-1 rounded text-xs mr-1">OPI</span> Free Program Practice</h4>
+                        <p class="text-xs text-gray-600 mt-1">Practice window spans <strong>8:19 AM - 9:15 AM</strong> (Exact block depends on Thursday standings).</p>
+                        <p class="text-xs text-purple-700 font-medium mt-1.5"><i class="fa-solid fa-chair mr-1"></i> Immediately following OPI: Return to Hotel 1 Ready Room for hair prep stations (same station style as Michigan).</p>
+                    </div>
+
+                    <div class="p-4 team-intermediate squad-inter">
+                        <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full uppercase">Intermediate Team</span>
+                        <h4 class="font-bold text-sm text-gray-900 mt-1"><span class="bg-gray-100 text-gray-700 font-bold px-1 rounded text-xs mr-1">UPI</span> Free Program Unofficial Ice</h4>
+                        <div class="mt-2 space-y-1.5 border-l border-gray-200 pl-3 ml-1 text-xs">
+                            <div><strong class="text-gray-700">10:05 AM</strong> — Meet in Hotel 1 Lobby</div>
+                            <div><strong class="text-gray-700">10:15 AM</strong> — Depart for Great Park Ice</div>
+                            <div><strong class="text-gray-700">10:40 AM</strong> — Enter Team Ready Room</div>
+                            <div class="text-emerald-600 font-semibold"><strong class="text-gray-700">11:05 - 11:25 AM</strong> — On Ice Practice Session</div>
+                            <div class="bg-indigo-50/50 p-2 rounded text-indigo-950 mt-2">
+                                <strong>After Practice Hair & Makeup Blitz (Hotel 1):</strong> Complete designated hair stations, finalize makeup lines, costume preparation. 
+                                <span class="block mt-1 font-bold text-emerald-700"><i class="fa-solid fa-lightbulb"></i> 2:00 - 2:20 PM — LED Lights On & Checked!</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 team-intermediate squad-inter bg-emerald-50/20">
+                        <div>
+                            <span class="text-[10px] bg-emerald-600 text-white font-bold px-2 py-0.5 rounded-full uppercase text-[9px]">FINAL COMPETITION EVENT</span>
+                            <h4 class="font-bold text-base text-emerald-900 mt-1"><i class="fa-solid fa-trophy text-amber-500 mr-1"></i> Intermediate Free Program Competition</h4>
+                        </div>
+                        <div class="mt-3 space-y-2 border-l-2 border-emerald-400 pl-3 ml-1 text-xs">
+                            <div><strong class="text-gray-700">2:25 PM</strong> — Meet in Hotel 1 Lobby</div>
+                            <div><strong class="text-gray-700">2:30 PM</strong> — Final departures to rink</div>
+                            <div class="bg-white p-2 rounded shadow-2xs border border-gray-100">
+                                <strong class="text-red-600 block text-sm"><i class="fa-solid fa-flag-checkered"></i> 3:11 PM — Competition Starts</strong>
+                                <p class="text-gray-500 mt-0.5">Parents head immediately straight to spectator stadium seating blocks. Skaters begin intense structural off-ice dynamic warm-ups with coaching crew.</p>
+                            </div>
+                            <div class="text-gray-600 pt-1 font-medium">Event concludes at ~4:00 PM. Teams are highly encouraged to stick around together to watch the premiere Elite Junior & Senior Showcase events running from 5:50 - 8:30 PM!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        let currentDayFilter = 'all';
+        let currentSquadFilter = 'all';
+
+        function filterDay(dayKey) {
+            currentDayFilter = dayKey;
+            
+            // Handle active styling on tabs
+            const tabs = ['all', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+            tabs.forEach(t => {
+                const el = document.getElementById(`tab-${t}`);
+                if(t === dayKey) {
+                    el.classList.add('tab-active');
+                    el.classList.remove('text-gray-500');
+                } else {
+                    el.classList.remove('tab-active');
+                    el.classList.add('text-gray-500');
+                }
+            });
+
+            applyCombinedFilters();
+        }
+
+        function filterSquad(squadKey) {
+            currentSquadFilter = squadKey;
+            
+            // Handle buttons styling
+            const buttons = {
+                all: document.getElementById('btn-squad-all'),
+                prelim: document.getElementById('btn-squad-prelim'),
+                inter: document.getElementById('btn-squad-inter')
+            };
+
+            Object.keys(buttons).forEach(key => {
+                if(key === squadKey) {
+                    buttons[key].className = "px-3 py-1 rounded-full bg-gray-900 text-white font-medium";
+                } else {
+                    let borderCol = key === 'prelim' ? 'border-blue-200 text-blue-600 hover:bg-blue-50' : key === 'inter' ? 'border-emerald-200 text-emerald-600 hover:bg-emerald-50' : 'border-gray-200 text-gray-600 hover:bg-gray-100';
+                    buttons[key].className = `px-3 py-1 rounded-full bg-white border ${borderCol} font-medium`;
+                }
+            });
+
+            applyCombinedFilters();
+        }
+
+        function applyCombinedFilters() {
+            const dayCards = document.querySelectorAll('.day-card');
+            
+            dayCards.forEach(card => {
+                const cardDay = card.getAttribute('data-day');
+                // Check day match
+                const dayMatch = (currentDayFilter === 'all' || currentDayFilter === cardDay);
+                
+                // Check inner children segments for squad criteria
+                let visibleSegments = 0;
+                const segments = card.querySelectorAll('[class*="squad-"]');
+                
+                segments.forEach(seg => {
+                    let squadMatch = false;
+                    if(currentSquadFilter === 'all') squadMatch = true;
+                    if(currentSquadFilter === 'prelim' && seg.classList.contains('squad-prelim')) squadMatch = true;
+                    if(currentSquadFilter === 'inter' && seg.classList.contains('squad-inter')) squadMatch = true;
+                    
+                    if(squadMatch) {
+                        seg.style.display = 'block';
+                        visibleSegments++;
+                    } else {
+                        seg.style.display = 'none';
+                    }
+                });
+
+                // Display card overall if the day fits and it holds relevant active tracks
+                if(dayMatch && visibleSegments > 0) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
