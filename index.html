@@ -15,7 +15,8 @@
 </head>
 <body class="bg-gray-50 font-sans text-gray-800 pb-12">
 
-    <header class="bg-gradient-to-r destruction bg-indigo-900 text-white shadow-md sticky top-0 z-50">
+    <!-- Header Block -->
+    <header class="bg-gradient-to-r bg-indigo-900 text-white shadow-md sticky top-0 z-50">
         <div class="max-w-4xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
             <div class="text-center sm:text-left mb-2 sm:mb-0">
                 <h1 class="text-xl font-bold tracking-tight">CSC Theatre on Ice Nationals 2026</h1>
@@ -28,8 +29,10 @@
         </div>
     </header>
 
+    <!-- Main Container -->
     <main class="max-w-4xl mx-auto px-4 mt-6">
         
+        <!-- Live Warning banner for updates -->
         <div class="mb-6 bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r shadow-sm">
             <div class="flex items-start">
                 <i class="fa-solid fa-triangle-exclamation text-amber-500 mt-1 mr-3 text-lg"></i>
@@ -40,6 +43,7 @@
             </div>
         </div>
 
+        <!-- Venue & Info Dashboard Card -->
         <section class="bg-white rounded-xl shadow-sm p-5 mb-6 border border-gray-100">
             <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Event Information</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -66,6 +70,7 @@
             </div>
         </section>
 
+        <!-- Interactive Schedule Tab Filters -->
         <div class="bg-white rounded-xl shadow-sm overflow-hidden mb-6 border border-gray-100">
             <div class="flex border-b border-gray-200 overflow-x-auto whitespace-nowrap scrollbar-hide text-sm">
                 <button onclick="filterDay('all')" id="tab-all" class="flex-1 py-3 px-4 text-center font-medium transition-all focus:outline-none tab-active">All Week</button>
@@ -77,6 +82,7 @@
                 <button onclick="filterDay('sat')" id="tab-sat" class="flex-1 py-3 px-4 text-center font-medium text-gray-500 hover:text-gray-900 transition-all focus:outline-none">Sat 6/27</button>
             </div>
             
+            <!-- Quick Track Filter -->
             <div class="bg-gray-50 px-4 py-2 flex flex-wrap gap-2 items-center justify-between text-xs border-b border-gray-100">
                 <span class="font-semibold text-gray-500">Filter by squad:</span>
                 <div class="flex space-x-1">
@@ -87,8 +93,10 @@
             </div>
         </div>
 
+        <!-- Schedule Target Canvas -->
         <div id="schedule-container" class="space-y-6">
 
+            <!-- Monday -->
             <div class="day-card" data-day="mon">
                 <h3 class="text-base font-bold text-gray-900 mb-2 px-1 flex items-center">
                     <span class="bg-gray-200 text-gray-800 text-xs px-2 py-0.5 rounded-md mr-2">Mon, June 22</span>
@@ -106,6 +114,7 @@
                 </div>
             </div>
 
+            <!-- Tuesday -->
             <div class="day-card" data-day="tue">
                 <h3 class="text-base font-bold text-gray-900 mb-2 px-1 flex items-center">
                     <span class="bg-gray-200 text-gray-800 text-xs px-2 py-0.5 rounded-md mr-2">Tue, June 23</span>
@@ -159,6 +168,7 @@
                 </div>
             </div>
 
+            <!-- Wednesday -->
             <div class="day-card" data-day="wed">
                 <h3 class="text-base font-bold text-gray-900 mb-2 px-1 flex items-center">
                     <span class="bg-gray-200 text-gray-800 text-xs px-2 py-0.5 rounded-md mr-2">Wed, June 24</span>
@@ -225,6 +235,7 @@
                 </div>
             </div>
 
+            <!-- Thursday -->
             <div class="day-card" data-day="thu">
                 <h3 class="text-base font-bold text-gray-900 mb-2 px-1 flex items-center">
                     <span class="bg-gray-200 text-gray-800 text-xs px-2 py-0.5 rounded-md mr-2">Thu, June 25</span>
@@ -262,6 +273,7 @@
                 </div>
             </div>
 
+            <!-- Friday -->
             <div class="day-card" data-day="fri">
                 <h3 class="text-base font-bold text-gray-900 mb-2 px-1 flex items-center">
                     <span class="bg-gray-200 text-gray-800 text-xs px-2 py-0.5 rounded-md mr-2">Fri, June 26</span>
@@ -303,6 +315,7 @@
                 </div>
             </div>
 
+            <!-- Saturday -->
             <div class="day-card" data-day="sat">
                 <h3 class="text-base font-bold text-gray-900 mb-2 px-1 flex items-center">
                     <span class="bg-gray-200 text-gray-800 text-xs px-2 py-0.5 rounded-md mr-2">Sat, June 27</span>
@@ -310,41 +323,48 @@
                 </h3>
                 <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 divide-y divide-gray-100">
                     
+                    <!-- OPI Section -->
                     <div class="p-4 team-intermediate squad-inter">
                         <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full uppercase">Intermediate Team</span>
                         <h4 class="font-bold text-sm text-gray-900 mt-1"><span class="bg-amber-100 text-amber-800 font-bold px-1 rounded text-xs mr-1">OPI</span> Free Program Practice</h4>
-                        <p class="text-xs text-gray-600 mt-1">Practice window spans <strong>8:19 AM - 9:15 AM</strong> (Exact block depends on Thursday standings).</p>
-                        <p class="text-xs text-purple-700 font-medium mt-1.5"><i class="fa-solid fa-chair mr-1"></i> Immediately following OPI: Return to Hotel 1 Ready Room for hair prep stations (same station style as Michigan).</p>
+                        <div class="mt-3 space-y-2 border-l border-gray-200 pl-3 ml-1 text-xs">
+                            <div class="text-purple-700 font-medium"><strong class="text-gray-700">7:00 AM</strong> — Meet in Hotel 1 Ready Room (Competition tights/pants on) to get **LED lights attached**!</div>
+                            <div><strong class="text-gray-700">7:15 AM</strong> — Depart hotel for rink.</div>
+                            <div><strong class="text-gray-700">8:02 AM</strong> — Enter Venue **Team Room 2** (Rink 4 / Main Arena).</div>
+                            <div class="text-emerald-600 font-semibold"><strong class="text-gray-700">8:27 - 8:35 AM</strong> — On-Ice OPI Session.</div>
+                            <div class="text-gray-500 italic bg-gray-50 p-1.5 rounded mt-1">Post-practice: Return straight back to hotel to start hair stations and temporarily take LED lights off.</div>
+                        </div>
                     </div>
 
+                    <!-- UPI Section -->
                     <div class="p-4 team-intermediate squad-inter">
                         <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full uppercase">Intermediate Team</span>
                         <h4 class="font-bold text-sm text-gray-900 mt-1"><span class="bg-gray-100 text-gray-700 font-bold px-1 rounded text-xs mr-1">UPI</span> Free Program Unofficial Ice</h4>
                         <div class="mt-2 space-y-1.5 border-l border-gray-200 pl-3 ml-1 text-xs">
-                            <div><strong class="text-gray-700">10:05 AM</strong> — Meet in Hotel 1 Lobby</div>
-                            <div><strong class="text-gray-700">10:15 AM</strong> — Depart for Great Park Ice</div>
-                            <div><strong class="text-gray-700">10:40 AM</strong> — Enter Team Ready Room</div>
-                            <div class="text-emerald-600 font-semibold"><strong class="text-gray-700">11:05 - 11:25 AM</strong> — On Ice Practice Session</div>
+                            <div><strong class="text-gray-700">10:15 AM</strong> — Assemble in hotel lobby and depart for UPI.</div>
+                            <div><strong class="text-gray-700">10:40 AM</strong> — Enter Venue **Team Room 14**.</div>
+                            <div class="text-emerald-600 font-semibold"><strong class="text-gray-700">11:05 - 11:25 AM</strong> — On-Ice UPI Practice Session.</div>
                             <div class="bg-indigo-50/50 p-2 rounded text-indigo-950 mt-2">
-                                <strong>After Practice Hair & Makeup Blitz (Hotel 1):</strong> Complete designated hair stations, finalize makeup lines, costume preparation. 
-                                <span class="block mt-1 font-bold text-emerald-700"><i class="fa-solid fa-lightbulb"></i> 2:00 - 2:20 PM — LED Lights On & Checked!</span>
+                                <strong>Post-UPI Window:</strong> Return to hotel to complete final hair/makeup and eat lunch.
+                                <span class="block mt-1 font-bold text-purple-700"><i class="fa-solid fa-lightbulb"></i> 2:00 PM — LED Lights Back ON!</span>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Main Final Event -->
                     <div class="p-4 team-intermediate squad-inter bg-emerald-50/20">
                         <div>
                             <span class="text-[10px] bg-emerald-600 text-white font-bold px-2 py-0.5 rounded-full uppercase text-[9px]">FINAL COMPETITION EVENT</span>
                             <h4 class="font-bold text-base text-emerald-900 mt-1"><i class="fa-solid fa-trophy text-amber-500 mr-1"></i> Intermediate Free Program Competition</h4>
                         </div>
                         <div class="mt-3 space-y-2 border-l-2 border-emerald-400 pl-3 ml-1 text-xs">
-                            <div><strong class="text-gray-700">2:25 PM</strong> — Meet in Hotel 1 Lobby</div>
-                            <div><strong class="text-gray-700">2:30 PM</strong> — Final departures to rink</div>
+                            <div><strong class="text-gray-700">2:15 PM</strong> — Depart from hotel.</div>
+                            <div><strong class="text-gray-700">2:53 PM</strong> — Enter Venue **Team Room 3** (Event begins 3:11 PM).</div>
                             <div class="bg-white p-2 rounded shadow-2xs border border-gray-100">
-                                <strong class="text-red-600 block text-sm"><i class="fa-solid fa-flag-checkered"></i> 3:11 PM — Competition Starts</strong>
-                                <p class="text-gray-500 mt-0.5">Parents head immediately straight to spectator stadium seating blocks. Skaters begin intense structural off-ice dynamic warm-ups with coaching crew.</p>
+                                <strong class="text-red-600 block text-sm"><i class="fa-solid fa-flag-checkered"></i> 3:18 PM — On-Ice Performance Time</strong>
+                                <p class="text-gray-500 mt-0.5">Parents go immediately to spectator seating blocks. Skaters focus on warm-up routines with coaches.</p>
                             </div>
-                            <div class="text-gray-600 pt-1 font-medium">Event concludes at ~4:00 PM. Teams are highly encouraged to stick around together to watch the premiere Elite Junior & Senior Showcase events running from 5:50 - 8:30 PM!</div>
+                            <div class="text-gray-600 pt-1 font-medium">Event concludes at ~4:00 PM. Highly encourage teams to stick around together to watch the Junior & Senior Showcase events (5:50 - 8:30 PM)!</div>
                         </div>
                     </div>
                 </div>
@@ -353,14 +373,13 @@
         </div>
     </main>
 
+    <!-- Interactive Scripting Logic -->
     <script>
         let currentDayFilter = 'all';
         let currentSquadFilter = 'all';
 
         function filterDay(dayKey) {
             currentDayFilter = dayKey;
-            
-            // Handle active styling on tabs
             const tabs = ['all', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
             tabs.forEach(t => {
                 const el = document.getElementById(`tab-${t}`);
@@ -372,20 +391,16 @@
                     el.classList.add('text-gray-500');
                 }
             });
-
             applyCombinedFilters();
         }
 
         function filterSquad(squadKey) {
             currentSquadFilter = squadKey;
-            
-            // Handle buttons styling
             const buttons = {
                 all: document.getElementById('btn-squad-all'),
                 prelim: document.getElementById('btn-squad-prelim'),
                 inter: document.getElementById('btn-squad-inter')
             };
-
             Object.keys(buttons).forEach(key => {
                 if(key === squadKey) {
                     buttons[key].className = "px-3 py-1 rounded-full bg-gray-900 text-white font-medium";
@@ -394,19 +409,14 @@
                     buttons[key].className = `px-3 py-1 rounded-full bg-white border ${borderCol} font-medium`;
                 }
             });
-
             applyCombinedFilters();
         }
 
         function applyCombinedFilters() {
             const dayCards = document.querySelectorAll('.day-card');
-            
             dayCards.forEach(card => {
                 const cardDay = card.getAttribute('data-day');
-                // Check day match
                 const dayMatch = (currentDayFilter === 'all' || currentDayFilter === cardDay);
-                
-                // Check inner children segments for squad criteria
                 let visibleSegments = 0;
                 const segments = card.querySelectorAll('[class*="squad-"]');
                 
@@ -424,7 +434,6 @@
                     }
                 });
 
-                // Display card overall if the day fits and it holds relevant active tracks
                 if(dayMatch && visibleSegments > 0) {
                     card.style.display = 'block';
                 } else {
